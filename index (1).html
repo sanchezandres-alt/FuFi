@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUFI - Futuras Finanzas</title>
+    <link rel="stylesheet" href="css/stilo.css/stilo.css">
+</head>
+<body>
+
+    <!-- Botón de Menú Hamburguesa para Dispositivos Móviles -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+        ☰
+    </button>
+
+    <!-- Sidebar / Menú Lateral -->
+    <aside class="sidebar" id="sidebar">
+        <!-- Contenedor único para el logo -->
+        <div class="logo-container">
+            <img src="css/imagenes/logofufi.png" alt="FUFI Logo" class="sidebar-logo">
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="recurso.html" class="nav-link">Recursos</a>
+            <a href="servicios.html" class="nav-link">Servicios</a>
+            <a href="educacion.html" class="nav-link">Educación</a>
+            <a href="calculadora.html" class="nav-link">Calculadora</a>
+            <a href="presupuesto.html" class="nav-link">Presupuesto</a>
+            <a href="emprendimiento.html" class="nav-link active">Emprendimiento</a>
+            <a href="contacto.html" class="nav-link">Contactos</a>
+        </nav>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <!-- Header -->
+        <header class="top-header">
+            <h1>FuFi - Futuras Finanzas</h1>
+            <p>Educación financiera para tu futuro.</p>
+        </header>
+
+        <!-- Banner Carrusel con Imágenes en Movimiento -->
+        <section id="inicio" class="hero-card">
+            <!-- Diapositivas de Fondo -->
+            <div class="carousel-slide active" style="background-image: linear-gradient(rgba(47, 62, 70, 0.8), rgba(47, 62, 70, 0.8));">
+                <img src="css/imagenes/bannerprin.png" alt="bannerprin">
+            </div>
+            <div class="carousel-slide" style="background-image: linear-gradient(rgba(47, 62, 70, 0.8), rgba(47, 62, 70, 0.8));">
+                <img src="css/imagenes/moneda.jpeg" alt="imagenban2">
+            </div>
+            <div class="carousel-slide" style="background-image: linear-gradient(rgba(47, 62, 70, 0.8), rgba(47, 62, 70, 0.8));">
+                <img src="css/imagenes/imagen4.jfif" alt="imagen3ba">
+            </div>
+
+            <!-- Contenido Fijo encima del Carrusel -->
+            <div class="hero-content">
+                <h2 class="hero-title">¡Bienvenido a FUFI!</h2>
+                <p>Aprende a gestionar tu presupuesto, ahorrar en tus gastos diarios y planificar tus metas estudiantiles de forma sencilla.</p>
+                <a href="educacion.html" class="btn-redireccion">Empieza Ahora →</a>
+            </div>
+        </section>
+
+        <!-- Cuadrícula de Pilares Finanzas -->
+        <section class="dashboard-grid">
+            <article id="aprende" class="feature-card">
+                <div class="card-header">
+                    <span class="icon">📊</span>
+                    <h3 class="card-title">Aprende</h3>
+                </div>
+                <p>Módulos interactivos sobre presupuestos, ingresos extra y finanzas personales.</p>
+            </article>
+
+            <article id="ahorra" class="feature-card">
+                <div class="card-header">
+                    <span class="icon">🐷</span>
+                    <h3 class="card-title">Ahorra</h3>
+                </div>
+                <p>Estrategias prácticas para recortar gastos hormiga e implementar metas de ahorro.</p>
+            </article>
+
+            <article id="crece" class="feature-card">
+                <div class="card-header">
+                    <span class="icon">🌱</span>
+                    <h3 class="card-title">Crece</h3>
+                </div>
+                <p>Descubre los fundamentos básicos de inversión e interés compuesto adaptados a ti.</p>
+            </article>
+
+            <article id="proyecta" class="feature-card">
+                <div class="card-header">
+                    <span class="icon">🎯</span>
+                    <h3 class="card-title">Proyecta</h3>
+                </div>
+                <p>Simuladores de crédito universitario, ahorro de matrícula y viajes estudiantiles.</p>
+            </article>
+        </section>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            <p>&copy; 2026 FUFI - Tu futuro financiero comienza hoy.</p>
+        </footer>
+
+    </main>
+
+    <!-- Script para mover las imágenes del banner y desplegar el menú móvil -->
+    <script>
+        const slides = document.querySelectorAll('.carousel-slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Cambia la imagen cada 4 segundos
+        setInterval(nextSlide, 4000);
+
+        // Control del menú responsivo para celulares
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>

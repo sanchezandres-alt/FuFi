@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUFI - Servicios Financieros</title>
+    <link rel="stylesheet" href="css/stilo.css/stilo.css">
+</head>
+<body>
+
+    <!-- Botón Hamburguesa para Menú Móvil -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+        ☰
+    </button>
+
+    <!-- Sidebar / Menú Lateral -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <img src="css/imagenes/logofufi.png" alt="FUFI Logo" class="sidebar-logo">
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="recurso.html" class="nav-link">Recursos</a>
+            <a href="servicios.html" class="nav-link">Servicios</a>
+            <a href="educacion.html" class="nav-link">Educación</a>
+            <a href="calculadora.html" class="nav-link">Calculadora</a>
+            <a href="presupuesto.html" class="nav-link">Presupuesto</a>
+            <a href="emprendimiento.html" class="nav-link active">Emprendimiento</a>
+            <a href="contacto.html" class="nav-link">Contactos</a>
+        </nav>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <!-- Contenedor exclusivo con la clase SERVICIOS -->
+        <div class="servicios">
+            
+            <header class="top-header">
+                <h1>Servicios Estudiantiles FUFI</h1>
+                <p>Soluciones personalizadas para guiar tu bienestar financiero en la universidad.</p>
+            </header>
+
+            <!-- Cuadro Destacado con Redirección Directa -->
+            <section class="servicio-destacado">
+                <div class="destacado-banner">
+                    <span class="tag-estrellas">⭐ Plan de Acompañamiento</span>
+                    <h2>Metodología de Orientación FUFI</h2>
+                    <p>Diseñamos un proceso paso a paso para ayudarte a organizar tus ingresos, salir de imprevistos económicos y proyectar tus metas sin estrés.</p>
+                    <a href="educacion.html" class="btn-redireccion">Ir a Educación Financiera →</a>
+                </div>
+            </section>
+
+            <!-- Tarjetas de Servicios Principales -->
+            <section class="servicios-grid">
+                
+                <article class="servicio-card">
+                    <div class="card-badge">Asesoría 1 a 1</div>
+                    <div class="servicio-icon">🎯</div>
+                    <h3>Diagnóstico Financiero Personal</h3>
+                    <p>Evaluamos tu situación económica actual para estructurar un plan de gastos mensual adaptado a tus metas universitarias.</p>
+                </article>
+
+                <article class="servicio-card">
+                    <div class="card-badge">Grupal</div>
+                    <div class="servicio-icon">👥</div>
+                    <h3>Talleres y Webinars en Vivo</h3>
+                    <p>Sesiones interactivas sobre el primer empleo, declaración de impuestos básica e inversión inteligente para jóvenes.</p>
+                </article>
+
+                <article class="servicio-card">
+                    <div class="card-badge">Herramientas</div>
+                    <div class="servicio-icon">🚀</div>
+                    <h3>Planes de Ahorro para Matrícula</h3>
+                    <p>Estrategias estructuradas para amortiguar el impacto del pago de semestres, materiales y viajes de estudio.</p>
+                </article>
+
+            </section>
+
+            <!-- Nueva Sección Objetivo de Redirección: Ruta de Acompañamiento -->
+            <section id="ruta-servicio" class="seccion-ruta">
+                <div class="ruta-box">
+                    <div class="ruta-header">
+                        <h2>🛠️ ¿Cómo funciona nuestro servicio?</h2>
+                        <p>Así te acompañamos desde el primer día para transformar tus finanzas:</p>
+                    </div>
+                    
+                    <div class="timeline-container">
+                        <div class="timeline-step">
+                            <div class="step-badge">Paso 1</div>
+                            <div class="step-content">
+                                <h4>Mapeo de Ingresos y Gastos</h4>
+                                <p>Identificamos tus fuentes de dinero y tus consumos fijos para saber exactamente de dónde partes.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="step-badge">Paso 2</div>
+                            <div class="step-content">
+                                <h4>Estrategia Personalizada</h4>
+                                <p>Creamos un plan a tu medida priorizando tus necesidades de estudio y margen de ahorro libre.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="step-badge">Paso 3</div>
+                            <div class="step-content">
+                                <h4>Seguimiento y Ajustes</h4>
+                                <p>Revisamos tus avances de forma periódica para adaptar el plan si cambian tus metas o ingresos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pie de página -->
+            <footer class="footer">
+                <p>&copy; 2026 FUFI - Futuras Finanzas. Todos los derechos reservados.</p>
+            </footer>
+
+        </div>
+    </main>
+
+    <!-- Script de control para la navegación responsiva en móviles -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        if (menuToggle && sidebar) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+        }
+    </script>
+
+</body>
+</html>
+

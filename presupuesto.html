@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUFI - Simulador de Presupuesto 50/30/20</title>
+    <link rel="stylesheet" href="css/stilo.css/stilo.css">
+</head>
+<body>
+
+    <!-- Botón de Menú Hamburguesa para Dispositivos Móviles -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+        ☰
+    </button>
+
+    <!-- Sidebar / Menú Lateral -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <img src="css/imagenes/logofufi.png" alt="FUFI Logo" class="sidebar-logo">
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="recurso.html" class="nav-link">Recursos</a>
+            <a href="servicios.html" class="nav-link">Servicios</a>
+            <a href="educacion.html" class="nav-link">Educación</a>
+            <a href="calculadora.html" class="nav-link">Calculadora</a>
+            <a href="presupuesto.html" class="nav-link">Presupuesto</a>
+            <a href="emprendimiento.html" class="nav-link active">Emprendimiento</a>
+            <a href="contacto.html" class="nav-link">Contactos</a>
+
+        </nav>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <!-- Header de la Pestaña -->
+        <header class="top-header">
+            <h1>Simulador de Presupuesto Mensual</h1>
+            <p>Organiza tus finanzas universitarias utilizando la famosa regla 50/30/20.</p>
+        </header>
+
+        <!-- Banner Visual Informativo -->
+        <section class="seccion-equipo-grupal">
+            <div class="banner-grupal">
+                <div class="grupal-texto">
+                    <span class="badge-equipo">💡 Método Financiero</span>
+                    <h2>¿Qué es la Regla 50/30/20?</h2>
+                    <p>Es una fórmula sencilla para distribuir tus ingresos mensuales de manera equilibrada:</p>
+                    <ul class="lista-regla">
+                        <li><strong>50% Necesidades Básicas:</strong> Arriendo, alimentación, transporte, servicios y materiales de estudio.</li>
+                        <li><strong>30% Deseos y Ocio:</strong> Salidas, hobbies, plataformas de streaming y gustos personales.</li>
+                        <li><strong>20% Ahorro o Inversión:</strong> Fondo de emergencia, metas futuras o pago de deudas.</li>
+                    </ul>
+                </div>
+                <div class="grupal-img-container">
+                    <img src="css/imagenes/503020.png"alt="503020" class="img-grupal">
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulador Interactiva -->
+        <section class="seccion-herramientas">
+            <div class="herramientas-grid">
+                <article class="card-herramienta">
+                    <div class="card-header">
+                        <span class="icon">📊</span>
+                        <h3 class="card-title">Calcula tu Presupuesto 50/30/20</h3>
+                    </div>
+                    
+                    <form class="form-herramienta" onsubmit="event.preventDefault(); calcularPresupuesto503020();">
+                        <div class="campo-form">
+                            <label for="ingresoMensual">Tus Ingresos Mensuales Totales ($):</label>
+                            <input type="number" id="ingresoMensual" placeholder="Ej: 500000" min="0" required>
+                        </div>
+
+                        <button type="submit" class="btn-calcular">Generar Distribución 🎯</button>
+
+                        <div id="resultadoPresupuesto" class="resultado-box" style="display:none;"></div>
+                    </form>
+                </article>
+            </div>
+        </section>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            <p>&copy; 2026 FUFI - Tu futuro financiero comienza hoy.</p>
+        </footer>
+
+    </main>
+
+    <!-- Scripts de Funcionalidad -->
+    <script>
+        // Control del menú móvil
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        if (menuToggle && sidebar) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+        }
+
+        // Lógica del Simulador 50/30/20
+        function calcularPresupuesto503020() {
+            const ingresos = parseFloat(document.getElementById('ingresoMensual').value) || 0;
+            const box = document.getElementById('resultadoPresupuesto');
+
+            if (ingresos <= 0) {
+                box.style.display = 'block';
+                box.style.backgroundColor = '#fef2f2';
+                box.style.borderColor = '#fecaca';
+                box.style.color = '#991b1b';
+                box.innerHTML = '⚠️ Por favor ingresa un monto de ingreso mensual válido.';
+                return;
+            }
+
+            const necesidades = ingresos * 0.50;
+            const deseos = ingresos * 0.30;
+            const ahorro = ingresos * 0.20;
+
+            box.style.display = 'block';
+            box.style.backgroundColor = '#f0fdf4';
+            box.style.borderColor = '#bbf7d0';
+            box.style.color = '#166534';
+            box.innerHTML = `
+                <strong>📌 Distribución Recomendada de tus $${ingresos.toLocaleString('es-CO')}:</strong><br><br>
+                • <strong>50% Necesidades ($${necesidades.toLocaleString('es-CO')}):</strong><br>
+                  <small>Destínalo a comida, transporte, vivienda y gastos fijos de la universidad.</small><br><br>
+                • <strong>30% Deseos ($${deseos.toLocaleString('es-CO')}):</strong><br>
+                  <small>Para tu entretenimiento, salidas con amigos, hobbies y gustos personales.</small><br><br>
+                • <strong>20% Ahorro ($${ahorro.toLocaleString('es-CO')}):</strong><br>
+                  <small>Guárdalo para imprevistos, proyectos futuros o inversiones.</small>
+            `;
+        }
+    </script>
+
+</body>
+</html>

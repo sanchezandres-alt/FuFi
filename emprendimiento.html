@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUFI - Carrera de Emprendimiento</title>
+    <link rel="stylesheet" href="css/stilo.css/stilo.css">
+</head>
+<body>
+
+    <!-- Botón de Menú Hamburguesa para Dispositivos Móviles -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+        ☰
+    </button>
+
+    <!-- Sidebar / Menú Lateral -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <img src="css/imagenes/logofufi.png" alt="FUFI Logo" class="sidebar-logo">
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="recurso.html" class="nav-link">Recursos</a>
+            <a href="servicios.html" class="nav-link">Servicios</a>
+            <a href="educacion.html" class="nav-link">Educación</a>
+            <a href="calculadora.html" class="nav-link">Calculadora</a>
+            <a href="presupuesto.html" class="nav-link">Presupuesto</a>
+            <a href="emprendimiento.html" class="nav-link active">Emprendimiento</a>
+            <a href="contacto.html" class="nav-link">Contactos</a>
+        </nav>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <!-- Header de la Pestaña -->
+        <header class="top-header">
+            <h1>Carrera de Emprendimiento Estudiantil</h1>
+            <p>Aprende a monetizar tus conocimientos y lanzar tu primer micro-proyecto sin descuidar la universidad.</p>
+        </header>
+
+        <!-- Banner Visual Informativo -->
+        <section class="seccion-equipo-grupal">
+            <div class="banner-grupal">
+                <div class="grupal-texto">
+                    <span class="badge-equipo">🚀 Guía de Micro-emprendimiento</span>
+                    <h2>De Estudiante a Emprendedor</h2>
+                    <p>Emprender en la universidad te permite generar ingresos independientes y desarrollar habilidades clave. Explora nuestras herramientas para dar tus primeros pasos:</p>
+                    <ul class="lista-regla">
+                        <li><strong>1. Define tu servicio o producto:</strong> Tutorías, ventas digitales, manualidades o soporte técnico.</li>
+                        <li><strong>2. Calcula tus costos reales:</strong> Materiales, transporte y el valor de tu tiempo.</li>
+                        <li><strong>3. Establece una meta mensual:</strong> Proyecta tus primeros ingresos de forma realista.</li>
+                    </ul>
+                </div>
+                <div class="grupal-img-container">
+                    <img src="css/imagenes/imagen4.jfif" alt="Emprendimiento universitario" class="img-grupal">
+                </div>
+            </div>
+        </section>
+
+        <!-- Herramientas Interactivas de Emprendimiento -->
+        <section class="seccion-herramientas">
+            <div class="herramientas-grid-doble">
+                
+                <!-- Herramienta 1: Calculadora de Primeros Ingresos -->
+                <article class="card-herramienta">
+                    <div class="card-header">
+                        <span class="icon">💼</span>
+                        <h3 class="card-title">Calculadora de Primeros Ingresos</h3>
+                    </div>
+                    <p>Estima cuánto puedes ganar vendiendo un producto o servicio por hora o por unidad.</p>
+                    
+                    <form class="form-herramienta" onsubmit="event.preventDefault(); calcularIngresosEmprendimiento();">
+                        <div class="campo-form">
+                            <label for="precioUnidad">Precio de Venta / Valor por Hora ($):</label>
+                            <input type="number" id="precioUnidad" placeholder="Ej: 15000" min="0" required>
+                        </div>
+                        <div class="campo-form">
+                            <label for="costoUnidad">Costo de Producción / Gastos por Unidad ($):</label>
+                            <input type="number" id="costoUnidad" placeholder="Ej: 5000" min="0" required>
+                        </div>
+                        <div class="campo-form">
+                            <label for="cantidadVentas">Ventas o Horas Estimadas al Mes:</label>
+                            <input type="number" id="cantidadVentas" placeholder="Ej: 20" min="1" required>
+                        </div>
+
+                        <button type="submit" class="btn-calcular">Calcular Ganancia Neta 💰</button>
+
+                        <div id="resultadoIngresos" class="resultado-box" style="display:none;"></div>
+                    </form>
+                </article>
+
+                <!-- Herramienta 2: Guía Interactiva de Micro-emprendimiento -->
+                <article class="card-herramienta">
+                    <div class="card-header">
+                        <span class="icon">📋</span>
+                        <h3 class="card-title">Checklist de Diagnóstico de Proyecto</h3>
+                    </div>
+                    <p>Selecciona las fases completadas para verificar si tu micro-emprendimiento está listo:</p>
+                    
+                    <div class="form-herramienta">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="paso1" onchange="evaluarDiagnostico()">
+                            <span>Tengo una idea clara (servicio/producto).</span>
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="paso2" onchange="evaluarDiagnostico()">
+                            <span>Conozco a mis clientes potenciales (compañeros, redes).</span>
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="paso3" onchange="evaluarDiagnostico()">
+                            <span>Tengo los costos y precios calculados.</span>
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="paso4" onchange="evaluarDiagnostico()">
+                            <span>Definí el canal de venta (Instagram, WhatsApp, presencial).</span>
+                        </label>
+
+                        <div id="resultadoDiagnostico" class="resultado-box" style="display:block; background-color: #f8f9fa; border-color: #e2e8f0; color: #2F3E46;">
+                            Progreso: 0 de 4 pasos completados. ¡Empieza marcando la primera casilla!
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            <p>&copy; 2026 FUFI - Tu futuro financiero comienza hoy.</p>
+        </footer>
+
+    </main>
+
+    <!-- Scripts de Funcionalidad -->
+    <script>
+        // Control del menú móvil
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        if (menuToggle && sidebar) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+        }
+
+        // Lógica de la Calculadora de Primeros Ingresos
+        function calcularIngresosEmprendimiento() {
+            const precio = parseFloat(document.getElementById('precioUnidad').value) || 0;
+            const costo = parseFloat(document.getElementById('costoUnidad').value) || 0;
+            const ventas = parseInt(document.getElementById('cantidadVentas').value) || 0;
+            const box = document.getElementById('resultadoIngresos');
+
+            if (precio <= costo) {
+                box.style.display = 'block';
+                box.style.backgroundColor = '#fef2f2';
+                box.style.borderColor = '#fecaca';
+                box.style.color = '#991b1b';
+                box.innerHTML = '⚠️ El precio de venta debe ser mayor que el costo de producción para obtener ganancias.';
+                return;
+            }
+
+            const ingresoBruto = precio * ventas;
+            const costoTotal = costo * ventas;
+            const gananciaNeta = ingresoBruto - costoTotal;
+            const margen = ((gananciaNeta / ingresoBruto) * 100).toFixed(1);
+
+            box.style.display = 'block';
+            box.style.backgroundColor = '#f0fdf4';
+            box.style.borderColor = '#bbf7d0';
+            box.style.color = '#166534';
+            box.innerHTML = `
+                <strong>📊 Proyección Mensual de Emprendimiento:</strong><br><br>
+                • Ventas Totales: <strong>$${ingresoBruto.toLocaleString('es-CO')}</strong><br>
+                • Costos Totales: <strong>$${costoTotal.toLocaleString('es-CO')}</strong><br>
+                • <strong>Ganancia Neta Limpia: $${gananciaNeta.toLocaleString('es-CO')}</strong><br>
+                • Margen de Ganancia: <strong>${margen}%</strong>
+            `;
+        }
+
+        // Lógica del Checklist de Diagnóstico
+        function evaluarDiagnostico() {
+            const p1 = document.getElementById('paso1').checked;
+            const p2 = document.getElementById('paso2').checked;
+            const p3 = document.getElementById('paso3').checked;
+            const p4 = document.getElementById('paso4').checked;
+
+            const total = [p1, p2, p3, p4].filter(Boolean).length;
+            const box = document.getElementById('resultadoDiagnostico');
+
+            if (total === 0) {
+                box.style.backgroundColor = '#f8f9fa';
+                box.style.borderColor = '#e2e8f0';
+                box.style.color = '#2F3E46';
+                box.innerHTML = 'Progreso: 0 de 4 pasos completados. ¡Empieza marcando la primera casilla!';
+            } else if (total < 4) {
+                box.style.backgroundColor = '#fffbe2';
+                box.style.borderColor = '#fef08a';
+                box.style.color = '#854d0e';
+                box.innerHTML = `<strong>Vas por buen camino:</strong> Has completado ${total} de 4 pasos. Revisa los puntos pendientes antes de lanzar tu proyecto.`;
+            } else {
+                box.style.backgroundColor = '#f0fdf4';
+                box.style.borderColor = '#bbf7d0';
+                box.style.color = '#166534';
+                box.innerHTML = '<strong>🎉 ¡Felicidades!</strong> Tienes las bases de tu micro-emprendimiento listas para arrancar.';
+            }
+        }
+    </script>
+
+</body>
+</html>

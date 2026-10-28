@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUFI - Recursos Financieros</title>
+    <link rel="stylesheet" href="css/stilo.css/stilo.css">
+</head>
+<body>
+
+  <!-- Botón de Menú Hamburguesa para Dispositivos Móviles -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+        ☰
+    </button>
+
+    <!-- Sidebar / Menú Lateral -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <img src="css/imagenes/logofufi.png" alt="FUFI Logo" class="sidebar-logo">
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="recurso.html" class="nav-link">Recursos</a>
+            <a href="servicios.html" class="nav-link">Servicios</a>
+            <a href="educacion.html" class="nav-link">Educación</a>
+            <a href="calculadora.html" class="nav-link">Calculadora</a>
+            <a href="presupuesto.html" class="nav-link">Presupuesto</a>
+            <a href="emprendimiento.html" class="nav-link active">Emprendimiento</a>
+            <a href="contacto.html" class="nav-link">Contactos</a>
+        </nav>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <!-- Clase contenedora exclusiva para la sección de Recursos -->
+        <div class="recursos">
+            
+            <header class="top-header">
+                <h1>Guías y Consejos Financieros</h1>
+                <p>Información clave para gestionar tu dinero de forma inteligente durante la universidad.</p>
+            </header>
+
+            <!-- Sección de Destacados: Reglas Clave -->
+            <section class="recursos-destacados">
+                <div class="destacado-card">
+                    <span class="badge">Regla de Oro</span>
+                    <h2>El Método 50/30/20</h2>
+                    <p>Divide tus ingresos de forma simple: <strong>50%</strong> para necesidades básicas (comida, transporte), <strong>30%</strong> para gustos o entretenimiento, y <strong>20%</strong> destinado al ahorro directo.</p>
+                </div>
+                
+                <div class="destacado-card">
+                    <span class="badge nuevo">Estrategia</span>
+                    <h2>Fondo de Emergencia Estudiantil</h2>
+                    <p>Guarda el equivalente a 1 o 2 meses de tus gastos habituales. Este dinero te protegerá ante imprevistos como reparaciones, medicinas o impresiones de última hora.</p>
+                </div>
+            </section>
+
+            <!-- Bloque de Información Importante: Pilares de Ahorro -->
+            <section class="recursos-seccion">
+                <h2 class="seccion-titulo">Conceptos Clave que Debes Dominar</h2>
+                <div class="recursos-grid">
+                    
+                    <article class="recurso-item">
+                        <div class="item-icon">🔍</div>
+                        <h3>Identificación de Gastos Hormiga</h3>
+                        <p>Son compras pequeñas pero frecuentes (cafés, snacks, suscripciones no usadas). Recortar solo $2 dólares diarios equivale a más de $700 dólares ahorrados al año.</p>
+                    </article>
+
+                    <article class="recurso-item">
+                        <div class="item-icon">📈</div>
+                        <h3>El Poder del Interés Compuesto</h3>
+                        <p>El interés compuesto permite que tus ganancias generen más dinero con el tiempo. Empezar a ahorrar o invertir montos pequeños desde joven marca una gran diferencia a futuro.</p>
+                    </article>
+
+                    <article class="recurso-item">
+                        <div class="item-icon">💳</div>
+                        <h3>Uso Responsable del Crédito</h3>
+                        <p>Las tarjetas de crédito no son dinero extra. Procura pagar siempre el saldo total del mes para construir un historial crediticio limpio sin pagar intereses innecesarios.</p>
+                    </article>
+
+                    <article class="recurso-item">
+                        <div class="item-icon">📋</div>
+                        <h3>Presupuesto Base Cero</h3>
+                        <p>Asigna un propósito a cada peso o dólar antes de que empiece el mes. Cuando tus ingresos menos tus egresos y ahorros dan cero, mantienes el control total.</p>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Bloque Informativo: Hábitos Recomendados -->
+            <section class="recursos-seccion">
+                <h2 class="seccion-titulo">Checklist de Buenos Hábitos Financieros</h2>
+                <div class="guias-lista">
+                    
+                    <div class="guia-card">
+                        <div class="guia-info">
+                            <h4>1. Revisa tus gastos una vez a la semana</h4>
+                            <p>Dedica 10 minutos cada domingo para repasar en qué gastaste y ajustar tu presupuesto de la siguiente semana.</p>
+                        </div>
+                    </div>
+
+                    <div class="guia-card">
+                        <div class="guia-info">
+                            <h4>2. Aplica la regla de las 48 horas</h4>
+                            <p>Antes de hacer una compra no planificada, espera dos días. Si aún lo consideras necesario y entra en tu presupuesto, cómpralo.</p>
+                        </div>
+                    </div>
+
+                    <div class="guia-card">
+                        <div class="guia-info">
+                            <h4>3. Define metas de ahorro con fecha y monto</h4>
+                            <p>Ahorrar "lo que sobre" rara vez funciona. Establece objetivos concretos como: "Ahorrar $50 para el material del próximo ciclo".</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Pie de página -->
+            <footer class="footer">
+                <p>&copy; 2026 FUFI - Tu futuro financiero comienza hoy.</p>
+            </footer>
+
+        </div>
+    </main>
+
+    <!-- Script de control para la navegación responsiva en móviles -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        if (menuToggle && sidebar) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+        }
+    </script>
+
+</body>
+</html>

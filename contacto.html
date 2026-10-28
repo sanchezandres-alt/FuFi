@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUFI - Contactos</title>
+    <link rel="stylesheet" href="css/stilo.css/stilo.css">
+</head>
+<body>
+
+    <!-- Pindutan a Hamburguesa para iti Menu ti Mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abreen ti menu">
+        ☰
+    </button>
+
+    <!-- Sidebar / Menu iti Sikigan -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <img src="css/imagenes/logofufi.png" alt="FUFI Logo" class="sidebar-logo">
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="recurso.html" class="nav-link">Recursos</a>
+            <a href="servicios.html" class="nav-link">Servicios</a>
+            <a href="educacion.html" class="nav-link">Educación</a>
+            <a href="calculadora.html" class="nav-link">Calculadora</a>
+            <a href="presupuesto.html" class="nav-link">Presupuesto</a>
+            <a href="emprendimiento.html" class="nav-link active">Emprendimiento</a>
+            <a href="contacto.html" class="nav-link">Contactos</a>
+        </nav>
+    </aside>
+
+    <!-- Kangrunaan a Kontenido -->
+    <main class="main-content">
+        
+        <!-- Contenedor a para iti CONTACTO -->
+        <div class="contacto">
+            
+            <!-- Ulu ti Panid -->
+            <header class="top-header">
+                <h1>Conecta con el Equipo FUFI</h1>
+                <p>Estamos aquí para orientarte en tus finanzas universitarias. Conócenos y déjanos tu opinión.</p>
+            </header>
+
+            <!-- Seksion 1: Litrato ti Grupo -->
+            <section class="seccion-equipo-grupal">
+                <div class="banner-grupal">
+                    <div class="grupal-texto">
+                        <span class="badge-equipo">👥 Nuestro Equipo</span>
+                        <h2>Unidos por tu Libertad Financiera</h2>
+                        <p>Somos un equipo apasionado de tres profesionales enfocados en transformar la manera en que los estudiantes gestionan su dinero y proyectan su futuro.</p>
+                    </div>
+                    <div class="grupal-img-container">
+                        <img src="css/imagenes/fotocoll.png" alt="todos" class="img-grupal">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seksion 2: Dagiti Kameng ti Grupo (3 a tao) -->
+            <section class="seccion-integrantes">
+                <div class="titulo-seccion">
+                    <h2>🤝 Integrantes del Proyecto</h2>
+                    <p>Ponte en contacto directo con cualquiera de nuestros asesores:</p>
+                </div>
+
+                <div class="integrantes-grid">
+                    
+                    <!-- Kameng 1 -->
+                    <article class="card-integrante">
+                        <div class="avatar-container">
+                            <img src="css/imagenes/ChatGPT Image 11 sept 2026, 16_21_44.png" alt="Foto de alexa">
+                        </div>
+                        <div class="integrante-info">
+                            <h3>Maria Alexandra Guasca Mesa</h3>
+                            <span class="cargo">Administradora & Programadora</span>
+                            <p class="bio">Especialista en programacion</p>
+                            <div class="contacto-datos">
+                                <a href="mailto:guasca.maria@dinamarca.edu.co" class="link-correo">✉️ guasca.maria@dinamarca.edu.co</a>
+                                <span class="telefono">📱 +57 322 724 0657</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Kameng 2 -->
+                    <article class="card-integrante">
+                        <div class="avatar-container">
+                            <img src="css/imagenes/ChatGPT Image 11 sept 2026, 16_03_32.png" alt="Foto de mariano">
+                        </div>
+                        <div class="integrante-info">
+                            <h3>Mariano Andres Amorocho Giraldo</h3>
+                            <span class="cargo">Analista</span>
+                            <p class="bio">Encargado de verificar los datos y los procesos.</p>
+                            <div class="contacto-datos">
+                                <a href="mailto:amorocho.mariano@dinamarca.edu.co" class="link-correo">✉️ amorocho.mariano@dinamarca.edu.co</a>
+                                <span class="telefono">📱 +57 302 701 6460</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Kameng 3 -->
+                    <article class="card-integrante">
+                        <div class="avatar-container">
+                            <img src="css/imagenes/ChatGPT Image 11 sept 2026, 15_51_35.png" alt="Foto andres">
+                        </div>
+                        <div class="integrante-info">
+                            <h3>Andres Felipe Sanchez Mosquera </h3>
+                            <span class="cargo">diseñador UX/UI </span>
+                            <p class="bio">Encargado de diseñar la pagina web.</p>
+                            <div class="contacto-datos">
+                                <a href="sanchez.andres@dinamarca.edu.co" class="link-correo">✉️ sanchez.andres@dinamarca.edu.co</a>
+                                <span class="telefono">📱 +57 312 739 1746</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Seksion 3: Surbey / Formulario -->
+            <section class="seccion-encuesta">
+                <div class="encuesta-card">
+                    <div class="encuesta-header">
+                        <h2>📊 Encuesta de Satisfacción FUFI</h2>
+                        <p>Tu opinión nos ayuda a mejorar nuestros recursos y servicios educativos.</p>
+                    </div>
+
+                    <form class="form-encuesta" action="#" method="POST" onsubmit="event.preventDefault(); alert('¡Gracias por tus comentarios! Hemos recibido tu encuesta.');">
+                        
+                        <div class="campo-form">
+                            <label for="nombre">Nombre completo:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez">
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" placeholder="tu.correo@ejemplo.com" required>
+                        </div>
+
+                        <div class="campo-form">
+                            <label>¿Cómo calificas la utilidad de la información de FUFI?</label>
+                            <div class="rating-opciones">
+                                <label class="radio-label"><input type="radio" name="calificacion" value="5" required> ⭐⭐⭐⭐⭐ Excelente</label>
+                                <label class="radio-label"><input type="radio" name="calificacion" value="4"> ⭐⭐⭐⭐ Buena</label>
+                                <label class="radio-label"><input type="radio" name="calificacion" value="3"> ⭐⭐⭐ Regular</label>
+                                <label class="radio-label"><input type="radio" name="calificacion" value="2"> ⭐⭐ Insuficiente</label>
+                            </div>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="pestaña">¿Qué pestaña de la plataforma te resultó más útil?</label>
+                            <select id="pestaña" name="pestaña" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="recursos">Recursos</option>
+                                <option value="servicios">Servicios</option>
+                                <option value="educacion">Educación (Tarjetas y Vida Crediticia)</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="comentarios">¿Tienes alguna sugerencia o tema que te gustaría que agreguemos?</label>
+                            <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe tus comentarios aquí..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-enviar-encuesta">Enviar Encuesta 🚀</button>
+
+                    </form>
+                </div>
+            </section>
+            
+            <!-- Google Maps iframe -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d495.7320313817923!2d-75.57282946013615!3d6.282620499162697!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428d63a4c5f53%3A0x9781208715f7436d!2sI.E.%20Dinamarca!5e0!3m2!1ses!2sco!4v1789756246481!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+            <!-- Padeppa ti Panid -->
+            <footer class="footer">
+                <p>&copy; 2026 FUFI - Futuras Finanzas. Todos los derechos reservados.</p>
+            </footer>
+
+        </div>
+    </main>
+
+    <!-- Script ti JavaScript para ti menu a responsive -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        if (menuToggle && sidebar) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+        }
+    </script>
+
+</body>
+</html>
